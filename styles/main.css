@@ -1,0 +1,336 @@
+@import url(font.css);
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    list-style: none;
+    font-family: 'PlayFair';
+    font-weight: 400;
+    user-select: none;
+}
+.container{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1140px;
+    padding: 0 15px;
+}
+.header__nav, .header__nav-adapt{
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+    align-items: center;
+}
+.header__nav-list{
+  display: flex;
+  gap: 40px; 
+}
+.header__nav-list a{
+    color: black;
+    font-weight: 400;
+    font-size: 12px;   
+}
+.header__nav-search{
+    display: flex;
+   gap: 4px;
+}
+.header__nav-search input{
+    padding: 6px 12px;
+    border: 1px solid #41a28e;
+    font-weight: 400;
+    font-size: 14px;
+    color: #4b4848;
+}
+.header__nav-search button{
+    background-color: #41a28e;
+    padding: 7px 8px;
+    color: white; 
+    cursor: pointer; 
+}
+.dropdown > a::after{
+    content: url(../img/down.svg);
+    padding-left: 5px;
+}
+.dropdown__menu{
+    border: 1px solid #e5e5e5;
+    border-radius: 2px;
+    width: 160px;
+    position: absolute;
+    bottom: -135px;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: 500ms;
+}
+.dropdown:hover .dropdown__menu{
+    opacity: 1;
+    visibility: visible;
+}
+.dropdown{
+    position: relative;
+}
+.dropdown__menu a{
+    padding: 12px 30px;
+    display: block;
+    border-bottom: 1px solid #e5e5e5;
+    color: black;
+}
+.header__content{
+    display: flex;
+    flex-direction: column;
+    background: url(../img/headerbg.jpg);
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    background-size: cover;
+    color: white;
+    margin-bottom: 48px;
+}
+.header__content h1{
+    font-weight: 400;
+    font-size: 50px;
+    text-align: center;
+    padding: 17px 61px;
+    background: rgba(0, 0, 0, 0.7);
+}
+.header__content p{
+    margin: 30px 0 50px;
+    font-weight: 400;
+    font-size: 22px;
+    text-shadow: 3px 0 black;
+}
+.btn{
+    font-weight: 400;
+    font-size: 12px;
+    color: #000;
+    background-color: white;
+    padding: 22px 35px;
+    transition: .3s;
+}
+.btn:hover{
+    background-color: #41a28e;
+    color: white;
+}
+.commerce__cards-card{
+    position: relative;
+    width: 255px;
+    display: flex;
+    overflow: hidden;
+    border: 1px solid #41a28e;
+}
+.commerce__cards-info{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(75, 72, 72, 0.7);
+    padding: 2px;
+    font-weight: 400;
+    font-size: 25px;
+    text-align: center;
+    color: #fff;
+    transform: translateY(100%);
+    transition: .3s;
+}
+.commerce__cards-card:hover .commerce__cards-info{
+    transform: translateY(0);
+}
+.commerce__cards{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 52px;
+
+}
+.commerce__content h2, .products__top h2{
+    font-size: 50px;
+    color: #000;
+    text-align: center;
+}
+.commerce__content p, .products__top p{
+    color: #666;
+    font-family: 'Roboto';
+    max-width: 496px;
+    text-align: center;
+}
+.commerce__content, .products__top{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    justify-content: center;
+    text-align: center;
+}
+.commerce__content{
+    margin-bottom: 72px;
+}
+.project{
+    background: url(../img/collection.jpg);
+    height: 404px;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    
+}
+.project__content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;  
+  align-items: flex-start;
+  color: #fff;
+}
+.project__content h2{
+    font-size: 20px;
+}
+.project__content p{
+    font-size: 50px;
+    margin: 3px 0 32px;
+}
+.products__top{
+    margin-bottom: 69px;
+    margin-top: 50px;
+    gap: 18px;
+}
+.products__card-item{
+    position: relative;
+    width: 255px;
+    display: flex;
+    overflow: hidden;  
+    flex-direction: column;
+}
+.products__card-info{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 16px 19px;
+    transform: translateY(100%);
+    transition: .3s; 
+}
+.products__card-item:hover .products__card-info{
+    transform: translateY(0);
+}
+.products__card-info button{
+    color: #fff;
+    background: none;
+    cursor: pointer;
+    display: flex;
+    gap: 14px;
+    align-items: center;
+}
+.products__card-info div{
+    display: flex;
+    gap: 20px;
+}
+.products__card-price{
+    display: flex;
+    flex-direction: column;
+    gap: 6px !important;
+    margin-top: 23px;
+}
+.products__card-price span{
+text-decoration: line-through;
+color: #666;
+margin-right: 15px;}
+.products__bottom{
+    display: flex;
+    justify-content: space-between;
+}
+.extra-info{
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 10px 18px;
+    text-transform: uppercase;
+    background: #4B4848;
+    font-size: 12px;
+    font-family: 'Roboto';
+    color: #fff;
+    opacity: 0.5;
+    transition: .3s;
+}
+.products__card-item:hover .extra-info{
+    opacity: 1;
+}
+.footer{
+    background: #000; 
+    padding: 36px;
+    margin-top: 50px;
+}
+.footer-title{
+    font-weight: 400;
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 40px;
+}
+.footer__content-list a{
+color: #fff;
+font-family: 'Roboto';
+display: block;
+font-weight: 400;
+font-size: 14px;
+margin: 15px;
+width: max-content;
+}
+.footer__content{
+    display: flex;
+    justify-content: space-between;
+}
+.footer__content-list:nth-child(3) a{
+  margin: 7px;
+    gap: 10px;
+    align-items: center;
+    display: flex;
+}
+.footer__content-list, .footer__content-form{
+    width: 255px;
+}
+.footer__content-input{
+    display: flex;
+}
+.footer input{
+    padding: 14px 10px;
+    font-family: 'Roboto';
+    font-size: 14px;
+}
+.footer button{
+    font-weight: 400;
+font-size: 16px;
+color: #fff;
+background: #41a28e;
+padding: 12px 10px;
+cursor: pointer;
+}
+.footer p{
+  font-size: 14px;
+  color: #fff; 
+  margin: 20px 0; 
+}
+.payments{
+    display: flex;
+    gap: 25px;
+}
+.payments i{
+  font-size: 32px;  
+  color: #fff;
+}
+
+.burger{
+    font-size: 30px;
+    display: none;
+    visibility: hidden;
+}
+.header__nav-adapt{
+    display: none;
+    visibility: hidden;
+    position: fixed; 
+    width: 100%;
+    z-index: 999;
+    background-color: #ffffffa5;
+    backdrop-filter: blur(5px);
+}
